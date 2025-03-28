@@ -1,7 +1,12 @@
+import Hello from "./Hello";
+import Message from "./Message";
+
 function App() {
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <Hello />
+      <Hello />
+      <Message />
     </div>
   );
 }
