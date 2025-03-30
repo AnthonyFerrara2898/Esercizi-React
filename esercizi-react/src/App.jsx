@@ -1,7 +1,10 @@
+import MouseClicker from "./components/MouseClicker";
+
 function App() {
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <h1>Mouse Clicker</h1>
+      <MouseClicker />
     </div>
   );
 }
