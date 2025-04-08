@@ -66,3 +66,27 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+ /* css card */
+ 
+ .card-container{
+  display: flex;
+
+ }
+
+ .card{
+  width: 400px;
+ }
+
+.img{
+  width: 380px;
+ }
+.titolo-card{
+  width: 100%;
+}
+
+.parag-card{
+  width: 100%;
+  color: aqua;
+}

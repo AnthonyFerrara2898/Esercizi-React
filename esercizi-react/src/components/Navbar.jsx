@@ -1,7 +1,10 @@
-export default function Navbar(){
+
+
+export default function Navbar({children}){
+
     return(
         <div>
-         <h1>Titolo</h1>
+         
          <button>Profilo</button>
         </div>
     )
