@@ -1,26 +1,45 @@
-import { useState } from "react"
-import { useAuth } from "../context/AuthProvider"
+import { useState } from "react";
+// Importiamo useState per gestire i dati inseriti nel form
 
-export default function Login(){
-  const[user, setUser] = useState({email:"", password:""}) 
-  const {login} = useAuth()
-  function handleChange(event){
-    setUser({ ...user, [event.target.name]: event.target.value })
+import { useAuth } from "../context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+// Importiamo il nostro hook personalizzato che ci dà accesso alla funzione login del context
+
+export default function Login() {
+  // Stato locale per tenere traccia dell'email e della password inserite nel form
+  const [user, setUser] = useState({ email: "", password: "" });
+  const navigate = useNavigate();
+  // Estraiamo la funzione di login dal context, che useremo quando l’utente invia il form
+  const { login, error } = useAuth();
+
+  // Funzione che si attiva quando cambiamo valore in un campo del form
+  // Aggiorna dinamicamente il campo giusto in base al nome dell’input (email o password)
+  function handleChange(event) {
+    setUser({ ...user, [event.target.name]: event.target.value });
   }
-  function handleSubmit(event){
-   event.preventDefault()
-   login(user)
+
+  // Funzione che si attiva quando inviamo il form
+  function handleSubmit(event) {
+    event.preventDefault(); // Previene il refresh della pagina
+    login(user);
+    // Chiamiamo la funzione di login passando i dati dell’utente
+    if (!error) {
+      navigate("/dashboard");
+    }
   }
 
   return (
-  <form onSubmit={handleSubmit}>
-    <p>Login</p>
-    <label>Email</label>
-        <input 
-        type="email" 
-        name="email" 
-        placeholder="Inserisci la tua email" 
-        onChange={handleChange}/>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <p>Login</p>
+
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Inserisci la tua email"
+          onChange={handleChange}
+        />
 
         <label>Password</label>
         <input
@@ -31,10 +50,10 @@ export default function Login(){
         />
 
         <button type="submit">Login</button>
-    </form>
-
-
-    )
+        {error && <p>{error}</p>}
+      </form>
+      <span> non sei registrato? </span>{" "}
+      <Link to="/registrati">Registrati</Link>
+    </div>
+  );
 }
-
-
