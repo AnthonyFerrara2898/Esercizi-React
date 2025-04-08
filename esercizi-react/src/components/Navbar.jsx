@@ -5,11 +5,11 @@ export default function Navbar() {
   const { user } = useAuth();
   return (
     <div>
-      {user ? (
-        <Link to="/profilo">Profilo</Link>
-      ) : (
+      {user ? 
+        <Link to="/registrati">Profilo</Link>
+       : 
         <Link to="/login">Login</Link>
-      )}
+      }
     </div>
   );
 }

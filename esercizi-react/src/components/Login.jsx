@@ -53,7 +53,7 @@ export default function Login() {
         {error && <p>{error}</p>}
       </form>
       <span> non sei registrato? </span>{" "}
-      <Link to="/registrati">Registrati</Link>
+      <Link to="/registrazione">Registrati</Link>
     </div>
   );
 }
