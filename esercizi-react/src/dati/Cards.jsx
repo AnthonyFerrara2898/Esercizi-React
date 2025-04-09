@@ -1,5 +1,6 @@
 const cards = [
   {
+    id: 1,
     titolo: "Manuali D&D 2024: lista completa",
     immagine:
       "https://support.mondadoristore.it/in/speciali/fantasticstore/dand/manuale.jpg",
@@ -8,6 +9,7 @@ const cards = [
     data: "20-09-2025",
   },
   {
+    id: 2,
     titolo: "Sigil, il VTT 3d di Beyond già in crisi?",
     immagine:
       "https://www.telodoioildungeon.it/wp-content/uploads/2025/02/sigil-vtt-3d-animated-spells-1024x631.webp",
@@ -16,14 +18,17 @@ const cards = [
     data: "08-07-2018",
   },
   {
+    id: 3,
     titolo: "Incantesimi di Individuazione di D&D 5e",
     immagine:
       "https://i.ytimg.com/vi/n4kkVxSNsBY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAlvXHXGO4rGdN-S7BIE7pHGk8s4A",
     paragrafo:
       "Vi parlerò di Identificare, Individuazione del Magico e altri incantesimi investigativi...",
+      
     data: "06-12-2023",
   },
   {
+    id: 4,
     titolo: "Warlock di D&D 2024: analisi",
     immagine: "https://i.ytimg.com/vi/8VcqukPuBtY/maxresdefault.jpg",
     paragrafo:
