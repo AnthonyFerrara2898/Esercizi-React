@@ -9,7 +9,7 @@ export default function Dashboard() {
   const navigate = useNavigate();
   function Handlelogout() {
     logout();
-    navigate("/login");
+    navigate("/");
   }
 
   return (

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Registrazione() {
+  const navigate = useNavigate();
   // Inizializziamo lo stato con un oggetto "user" che conterrà i dati inseriti dall’utente nel form
   const [user, setUser] = useState({
     nome: "",
@@ -11,7 +13,7 @@ export default function Registrazione() {
   });
 
   // Prendiamo la funzione di registrazione dal nostro context (quello creato in AuthProvider)
-  const { registrazione } = useAuth();
+  const { registrazione, error } = useAuth();
 
   // Questa funzione si attiva ogni volta che l’utente scrive qualcosa in un input
   // Aggiorna dinamicamente lo stato dell’utente (basandosi sul nome del campo)
@@ -23,6 +25,9 @@ export default function Registrazione() {
   function handleSubmit(event) {
     event.preventDefault(); // Impedisce il comportamento di default del form (evita il refresh della pagina)
     registrazione(user); // Chiama la funzione 'registrazione' passando i dati dell'utente
+    if (!error) {
+      navigate("/");
+    }
   }
 
   return (
