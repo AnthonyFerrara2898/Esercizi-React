@@ -23,13 +23,15 @@ a:hover {
 }
 
 body {
-  margin: 25px;
+  margin: 0px;
+  padding: 25px;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
   background-color: antiquewhite;
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -73,6 +75,7 @@ button:focus-visible {
 .card-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .card {
@@ -84,6 +87,7 @@ button:focus-visible {
   justify-content: space-around;
   align-items: center;
   box-shadow: 14px 13px 26px 4px rgba(0, 0, 0, 0.64);
+  background-color: rgb(251, 252, 244);
 }
 
 .img {
@@ -91,9 +95,28 @@ button:focus-visible {
   height: 380px;
 }
 .titolo-card {
+  font-size: 25px;
+  color: rgba(109, 79, 5, 0.836);
 }
 
 .parag-card {
   width: 100%;
+  font-size: 20px;
   color: rgb(17, 17, 17);
+}
+
+.link-card{
+  font-size: 18px;
+  color: rgba(109, 79, 5, 0.836);
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+.parag-articolo{
+  font-size: 20px;
+  font-weight: bold;
 }

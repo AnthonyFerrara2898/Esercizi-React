@@ -7,7 +7,7 @@ import { useAuth } from "../context/AuthContext";
 export default function Navbar() {
   const {user} = useAuth();
   return (
-    <div>
+    <div className="navbar">
       
       <Link to="/registrazione" element={<Registrazione></Registrazione>}>
         Registrati

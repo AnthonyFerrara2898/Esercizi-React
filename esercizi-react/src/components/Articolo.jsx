@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import articoli from "../dati/Articoli.jsx";
 
 export default function Articolo() {
@@ -11,7 +11,9 @@ export default function Articolo() {
   }, []);
   return (
     <div>
-      <p>{articolo.paragrafo}</p>
+      <img className="immagine-articolo" src={articolo.immagine}/>
+      <p className="parag-articolo">{articolo.paragrafo}</p>
+      <Link to="/">Home</Link>
     </div>
   );
 }

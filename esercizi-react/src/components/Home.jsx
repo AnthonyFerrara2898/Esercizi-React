@@ -6,8 +6,10 @@ import cards from "../dati/Cards.jsx";
 export default function Home() {
   return (
     <div>
-      <h1>D&D Wiki</h1>
       <Navbar></Navbar>
+
+      <h1>D&D Wiki</h1>
+      
       <div className="card-container">
         {cards.map((card, index) => (
           <Card
