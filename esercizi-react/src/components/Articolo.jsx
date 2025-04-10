@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import articoli from "../dati/Articoli.jsx";
 
-export default function Articolo(){
-  return(
-    {cards.map((card, index) =>(
-          key={index}
-          titolo={card.titolo}
-          immagine={card.immagine}
-          paragrafo={card.paragrafo}
-          data={card.data}
-  ))}
-  )
+export default function Articolo() {
+  const { id } = useParams();
+  const [articolo, setArticolo] = useState([]);
+  useEffect(() => {
+    const articoloSelezionato = articoli.find((x) => x.id === parseInt(id));
+    setArticolo(articoloSelezionato);
+  }, []);
+  return (
+    <div>
+      <p>{articolo.paragrafo}</p>
+    </div>
+  );
 }
-

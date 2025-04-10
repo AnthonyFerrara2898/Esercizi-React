@@ -23,11 +23,12 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 25px;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: antiquewhite;
 }
 
 h1 {
@@ -67,26 +68,32 @@ button:focus-visible {
   }
 }
 
+/* css card */
 
- /* css card */
- 
- .card-container{
+.card-container {
   display: flex;
-
- }
-
- .card{
-  width: 400px;
- }
-
-.img{
-  width: 380px;
- }
-.titolo-card{
-  width: 100%;
+  flex-wrap: wrap;
 }
 
-.parag-card{
+.card {
+  width: 400px;
+  margin: 25px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 14px 13px 26px 4px rgba(0, 0, 0, 0.64);
+}
+
+.img {
+  width: 350px;
+  height: 380px;
+}
+.titolo-card {
+}
+
+.parag-card {
   width: 100%;
-  color: aqua;
+  color: rgb(17, 17, 17);
 }
