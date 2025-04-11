@@ -13,15 +13,21 @@ export default function Dashboard() {
   }
 
   return (
-    <div>
-      <p>Dati Utente</p>
+    <div className="dashboard-container">
+      <h2>Dati Utente</h2>
 
-      <p>Nome: {user.nome}</p>
-      <p>Cognome: {user.cognome}</p>
-      <p>Email: {user.email}</p>
+      <p>
+        <strong>Nome:</strong> {user.nome}
+      </p>
+      <p>
+        <strong>Cognome:</strong> {user.cognome}
+      </p>
+      <p>
+        <strong>Email:</strong> {user.email}
+      </p>
 
       <Link to="/">Home</Link>
-      <button onClick={Handlelogout}>Logout</button> 
+      <button onClick={Handlelogout}>Logout</button>
     </div>
   );
 }

@@ -29,9 +29,9 @@ export default function Login() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <p>Login</p>
+    <div className="loginform-container">
+      <form onSubmit={handleSubmit} className="loginform">
+        <h2>Login</h2>
 
         <label>Email</label>
         <input
@@ -49,11 +49,12 @@ export default function Login() {
           onChange={handleChange}
         />
 
-        <button type="submit">Login</button>
+        <button type="submit">Effettua il login</button>
         {error && <p>{error}</p>}
       </form>
-      <span> non sei registrato? </span>{" "}
+      <span>Non sei registrato? </span>{" "}
       <Link to="/registrazione">Registrati</Link>
+      <Link to="/">Home</Link>
     </div>
   );
 }

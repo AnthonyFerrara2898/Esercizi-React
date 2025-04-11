@@ -30,8 +30,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: antiquewhite;
+  justify-content: center;
 }
-
 
 h1 {
   font-size: 3.2em;
@@ -105,18 +105,68 @@ button:focus-visible {
   color: rgb(17, 17, 17);
 }
 
-.link-card{
+.link-card {
   font-size: 18px;
   color: rgba(109, 79, 5, 0.836);
 }
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-around;
   font-size: 18px;
 }
 
-.parag-articolo{
+.parag-articolo {
   font-size: 20px;
   font-weight: bold;
+}
+
+.regform {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: rgb(251, 252, 244);
+  padding: 20px;
+  box-shadow: 14px 13px 26px 4px rgba(0, 0, 0, 0.64);
+}
+.loginform-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: rgb(251, 252, 244);
+  padding: 20px;
+  box-shadow: 14px 13px 26px 4px rgba(0, 0, 0, 0.64);
+}
+.loginform {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard-container {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: rgb(251, 252, 244);
+  padding: 20px;
+  box-shadow: 14px 13px 26px 4px rgba(0, 0, 0, 0.64);
+}
+.nologged {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: rgb(251, 252, 244);
+  padding: 20px;
+  box-shadow: 14px 13px 26px 4px rgba(0, 0, 0, 0.64);
+  max-width: 350px;
+}
+.nologged-link {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }

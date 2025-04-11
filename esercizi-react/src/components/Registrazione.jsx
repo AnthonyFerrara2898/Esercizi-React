@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Registrazione() {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ export default function Registrazione() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="regform">
         <h4>Registrazione</h4>
 
         <label>Nome</label>
@@ -68,6 +68,7 @@ export default function Registrazione() {
         />
 
         <button type="submit">Registrati</button>
+        <Link to="/">Home</Link>
       </form>
     </>
   );
